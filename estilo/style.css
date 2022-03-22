@@ -6,83 +6,73 @@
     box-sizing: border-box;  
     padding: 0;
     margin: 0;
-    background-color: transparent;
     overflow-x: hidden;
-
 }
 
 body{
   background-color: #f7f3f2;
 }
+/*Container-------------*/
+.container{
+  display: grid;
+  height: 100vh;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  grid-template-areas: "nav nav nav nav nav"
+                       "header header header header header";
+}
 
-li, a, button{
+
+/*Navbar*/
+.nav{
+  grid-area: nav;
+  background-color: rgba(255, 255, 255, 0.034);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100vw;
+  padding: 25px 2%;
+  margin: 0%;
+  z-index: 200;
+} 
+
+.nav a{
+  text-decoration: none; 
+  display: inline-block;
   font-family: 'Montserrat', sans-serif;
   font-weight: 500;
-  font-size: 16px;
+  font-size: 22px;
   color: rgb(255, 255, 255);
-  background-color: transparent ;
   text-decoration: none;
-  
-}
-
-header{
-  display: flex;
-  justify-content:space-between;
-  align-items: center;
-  background-color: rgba(0, 0, 0, 0.800) ;
-  padding: 25px 2%; 
-}
-
-.logo {
+  transition: all 0.3s;
   cursor: pointer;
+ 
 }
 
-.nav_links {
-  list-style: none;
-  margin: auto;
-  
+.nav a:hover{
+    color: rgb(42, 170, 255);
 }
 
-nav.links li{
+
+.nav li{
   display: inline-block;
   padding: 0px 20px;
 }
 
- a {
-  transition: all 0.3s ease 0s;
+/*Header*/
+.header{
+  grid-area: header;
+  justify-content: space-between;
+  height: 220vh;
+  width: 100vw;
+  position: relative;
+  bottom: 12vh;
+  z-index: 199;
 }
 
- a:hover{
-  color: rgb(42, 170, 255);
-}
-
-h1{
-  font-family: 'Montserrat', sans-serif;
-  font-weight: 500;
-  font-size: 36px;
+.header h1{
   color: white;
-  padding: 406px;
-  background-image: url(/assets/wallpaper2.jpg);
-
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-img.meupc{
-  width: 100%;
-  height: 100%;
+  position: relative;
+  top: 700px;
   
 }
