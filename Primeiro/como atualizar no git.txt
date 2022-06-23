@@ -1,8 +1,0 @@
-/*como adicionar novos comando no GitHub:--------*/
-
-comandos no Git Bash Here feito na pasta do projeto:
-faça os comandos:
-
-git add .
-git commit -m "coloque o comentário sobre a alteração aqui"
-git push
